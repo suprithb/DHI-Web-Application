@@ -1,0 +1,309 @@
+hello,greet_hello
+heloo,greet_hello
+hellooo,greet_hello
+hello,greet_hello
+helloo,greet_hello
+helooo,greet_hello
+hi,greet_hello
+hiii,greet_hello
+hii,greet_hello
+hey there,greet_hello
+hey hi,greet_hello
+hey hii,greet_hello
+hey!!,greet_hello
+hi!!,greet_hello
+hiii,greet_hello
+heya,greet_hello
+heya,greet_hello
+helo,greet_hello
+hello dhi,greet_hello
+heloo dhi,greet_hello
+hellooo dhi,greet_hello
+hello dhi,greet_hello
+helloo dhi,greet_hello
+helooo dhi,greet_hello
+hi dhi,greet_hello
+hiii dhi,greet_hello
+hii dhi,greet_hello
+hey there dhi,greet_hello
+hey hi dhi,greet_hello
+hey hii dhi,greet_hello
+hey!! Dhi,greet_hello
+hi!! Dhi,greet_hello
+hiii dhi,greet_hello
+heya dhi,greet_hello
+heya dhi,greet_hello
+helo dhi,greet_hello
+hello,greet_hello
+heloo,greet_hello
+hellooo,greet_hello
+hello,greet_hello
+helloo,greet_hello
+helooo,greet_hello
+hi,greet_hello
+hiii,greet_hello
+hii,greet_hello
+hey there,greet_hello
+hey hi,greet_hello
+hey hii,greet_hello
+hey!!,greet_hello
+hi!!,greet_hello
+hiii,greet_hello
+heya,greet_hello
+heya,greet_hello
+helo,greet_hello
+hello dhi,greet_hello
+heloo dhi,greet_hello
+hellooo dhi,greet_hello
+hello dhi,greet_hello
+helloo dhi,greet_hello
+helooo dhi,greet_hello
+hi dhi,greet_hello
+hiii dhi,greet_hello
+hii dhi,greet_hello
+hey there dhi,greet_hello
+hey hi dhi,greet_hello
+hey hii dhi,greet_hello
+hey!! Dhi,greet_hello
+hi!! Dhi,greet_hello
+hiii dhi,greet_hello
+heya dhi,greet_hello
+heya dhi,greet_hello
+helo dhi,greet_hello
+thanks ,greet_thanks
+thank you,greet_thanks
+thanks,greet_thanks
+thanks you,greet_thanks
+thank you so much,greet_thanks
+appreciate it,greet_thanks
+great thanks,greet_thanks
+thanks it was helpful,greet_thanks
+thanks ,greet_thanks
+thank you,greet_thanks
+thanks,greet_thanks
+thanks you,greet_thanks
+thank you so much,greet_thanks
+appreciate it,greet_thanks
+great thanks,greet_thanks
+thanks it was helpful,greet_thanks
+thanks  dhi,greet_thanks
+thank you dhi,greet_thanks
+thanks dhi,greet_thanks
+thanks you dhi,greet_thanks
+thank you so much dhi,greet_thanks
+appreciate it dhi,greet_thanks
+great thanks dhi,greet_thanks
+thanks it was helpful dhi,greet_thanks
+thanks  dhi,greet_thanks
+thank you dhi,greet_thanks
+thanks dhi,greet_thanks
+thanks you dhi,greet_thanks
+thank you so much dhi,greet_thanks
+appreciate it dhi,greet_thanks
+great thanks dhi,greet_thanks
+thanks it was helpful dhi,greet_thanks
+bye,greet_goodbye
+good bye,greet_goodbye
+goodbye,greet_goodbye
+good-bye,greet_goodbye
+goodbyeee,greet_goodbye
+byee,greet_goodbye
+byes,greet_goodbye
+cya,greet_goodbye
+cyaa,greet_goodbye
+thank you bye,greet_goodbye
+thank you byee,greet_goodbye
+thank you byes,greet_goodbye
+good bye,greet_goodbye
+good-bye,greet_goodbye
+goodbye,greet_goodbye
+byee,greet_goodbye
+bye,greet_goodbye
+cya bye,greet_goodbye
+bye,greet_goodbye
+good bye,greet_goodbye
+goodbye,greet_goodbye
+good-bye,greet_goodbye
+goodbyeee,greet_goodbye
+byee,greet_goodbye
+byes,greet_goodbye
+cya,greet_goodbye
+cyaa,greet_goodbye
+thank you bye,greet_goodbye
+thank you byee,greet_goodbye
+thank you byes,greet_goodbye
+good bye,greet_goodbye
+good-bye,greet_goodbye
+goodbye,greet_goodbye
+byee,greet_goodbye
+bye,greet_goodbye
+cya bye,greet_goodbye
+bye dhi,greet_goodbye
+good bye dhi,greet_goodbye
+goodbye dhi,greet_goodbye
+good-bye dhi,greet_goodbye
+goodbyeee dhi,greet_goodbye
+byee dhi,greet_goodbye
+byes dhi,greet_goodbye
+cya dhi,greet_goodbye
+cyaa dhi,greet_goodbye
+thank you bye dhi,greet_goodbye
+thank you byee dhi,greet_goodbye
+thank you byes dhi,greet_goodbye
+good bye dhi,greet_goodbye
+good-bye dhi,greet_goodbye
+goodbye dhi,greet_goodbye
+byee dhi,greet_goodbye
+bye dhi,greet_goodbye
+cya bye dhi,greet_goodbye
+bye dhi,greet_goodbye
+good bye dhi,greet_goodbye
+goodbye dhi,greet_goodbye
+good-bye dhi,greet_goodbye
+goodbyeee dhi,greet_goodbye
+byee dhi,greet_goodbye
+byes dhi,greet_goodbye
+cya dhi,greet_goodbye
+cyaa dhi,greet_goodbye
+thank you bye dhi,greet_goodbye
+thank you byee dhi,greet_goodbye
+thank you byes dhi,greet_goodbye
+good bye dhi,greet_goodbye
+good-bye dhi,greet_goodbye
+goodbye dhi,greet_goodbye
+byee dhi,greet_goodbye
+bye dhi,greet_goodbye
+cya bye dhi,greet_goodbye
+give me the top 2  states with sales ,other_other
+show me the in last 2 weeks,other_other
+what are the total sales by region,other_other
+what are the top states with sales,other_other
+what are the sales in last 1 weeks,other_other
+show me the sales in last 2 weeks,other_other
+what is the total sales by region,other_other
+what are sales by grain,other_other
+show me the top 3 states in sales,other_other
+give me the top 5 states with sales ,other_other
+show me the in last 2 weeks,other_other
+what are the total sales by region,other_other
+what are the top states with sales,other_other
+what are the sales in last 1 weeks,other_other
+show me the sales in last 3 weeks,other_other
+what is the total sales by region,other_other
+what are sales by grain,other_other
+show me the top 2 states in sales,other_other
+give me the top 2 states with sales ,other_other
+show me the in last 2 weeks,other_other
+what are the total sales by region,other_other
+what are the top states with sales,other_other
+what are the sales in last 2 weeks,other_other
+show me the sales in last 2 weeks,other_other
+what is the total sales by region,other_other
+what are sales by grain,other_other
+show me the top 2 states in sales,other_other
+what are the top 2 region by bookinamt,other_other
+top 2 region by bookingquantity,other_other
+give me the bookingamt by productlinecode,other_other
+give me the bookingquantity by productgroup,other_other
+what are the top 2 region by bookinamt,other_other
+top 2 region by bookingquantity,other_other
+show me the bookingamt by productlinecode,other_other
+show me the bookingquantity by productgroup,other_other
+what are the top 2 region by bookinamt,other_other
+top 2 region by bookingquantity,other_other
+give me the bookingamt by productlinecode,other_other
+give me the bookingquantity by productgroup,other_other
+what are the top 2 region by bookinamt,other_other
+top 2 region by bookingquantity,other_other
+show me the bookingamt by productlinecode,other_other
+show me the bookingquantity by productgroup,other_other
+show me the top 2 states in sales,other_other
+what are the top 2 region by bookinamt,other_other
+top 2 region by bookingquantity,other_other
+give me the bookingamt by productlinecode,other_other
+give me the bookingquantity by productgroup,other_other
+what are the top 2 region by bookinamt,other_other
+top 2 region by bookingquantity,other_other
+show me the bookingamt by productlinecode,other_other
+show me the bookingquantity by productgroup,other_other
+what are the top 2 region by bookinamt,other_other
+top 2 region by bookingquantity,other_other
+give me the bookingamt by productlinecode,other_other
+give me the bookingquantity by productgroup,other_other
+what are the top 2 region by bookinamt,other_other
+top 2 region by bookingquantity,other_other
+show me the bookingamt by productlinecode,other_other
+show me the bookingquantity by productgroup,other_other
+bookingamt by region,other_other
+top 2 region by bookingamt,other_other
+bookingamt by subtheatre,other_other
+bookingamt by region,other_other
+top 2 region by bookingamt,other_other
+bookingamt by subtheatre,other_other
+bottom 2 states,other_other
+bottom 2 region,other_other
+group by bookingamt,other_other
+bookingquantity by subtheatre,other_other
+bookingquantity by region,other_other
+top 2 region by bookingamt,other_other
+bookingquantity by subtheatre,other_other
+bottom 2 states,other_other
+bottom 2 region,other_other
+group by bookingquantity,other_other
+bookingquantity by subtheatre order by,other_other
+bottom 2 states order by desc,other_other
+bottom 2 region order by ascending,other_other
+group by bookingquantity,other_other
+bottom 2 states order by descending,other_other
+bottom 2 region order by asc,other_other
+group by bookingquantity,other_other
+select top sum order group by ,other_other
+select top sum order group by ,other_other
+group by bookingquantity,other_other
+bottom 2 states order by descending,other_other
+bottom 2 region order by asc,other_other
+group by bookingquantity,other_other
+select top sum order group by ,other_other
+select top sum order group by ,other_other
+group by bookingquantity,other_other
+bottom 2 states order by descending,other_other
+bottom 2 region order by asc,other_other
+what are the ,other_other
+show me the,other_other
+give me the,other_other
+what are the ,other_other
+show me the,other_other
+give me the,other_other
+what are the ,other_other
+show me the,other_other
+give me the,other_other
+fjkfk jd,other_other
+what is the,other_other
+show me the ,other_other
+what are the ,other_other
+show me the,other_other
+give me the,other_other
+what are the ,other_other
+show me the,other_other
+give me the,other_other
+what are the ,other_other
+show me the,other_other
+give me the,other_other
+fjkfk jd,other_other
+what is the,other_other
+show me the ,other_other
+give me the ,other_other
+show me the,other_other
+can you give me ,other_other
+could you give me ,other_other
+give me the ,other_other
+show me the ,other_other
+ select the data ,other_other
+show me the ,other_other
+give me the ,other_other
+show me the,other_other
+can you give me ,other_other
+could you give me ,other_other
+give me the ,other_other
+show me the ,other_other
+ select the data ,other_other
