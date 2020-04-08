@@ -1,0 +1,93 @@
+URL : http://localhost:8080/DHI/query/{room-id}
+{
+   "status": "success",
+   "statusCode": "200",
+   "serverTextMessage": "",
+   "serverImageMessage": "http://ipsolution.southindia.cloudapp.azure.com:8080/DHI/assets/test_user_bar_chart_vr_2019_05_22_12_38_30",
+   "tabularData":    {
+      "columNames":       [
+         "sum(bookingquantity)",
+         "productgroup"
+      ],
+      "row":       [
+                  {
+            "rowNumber": "1",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingquantity)",
+                  "columnValue": "164105"
+               },
+                              {
+                  "columnName": "productgroup",
+                  "columnValue": "DCS"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "2",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingquantity)",
+                  "columnValue": "40635"
+               },
+                              {
+                  "columnName": "productgroup",
+                  "columnValue": "OTH"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "3",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingquantity)",
+                  "columnValue": "916820"
+               },
+                              {
+                  "columnName": "productgroup",
+                  "columnValue": "SOF"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "4",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingquantity)",
+                  "columnValue": "1967398"
+               },
+                              {
+                  "columnName": "productgroup",
+                  "columnValue": "SUP"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "5",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingquantity)",
+                  "columnValue": "1439928"
+               },
+                              {
+                  "columnName": "productgroup",
+                  "columnValue": "WIR"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "6",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingquantity)",
+                  "columnValue": "3017592"
+               },
+                              {
+                  "columnName": "productgroup",
+                  "columnValue": "WIRL"
+               }
+            ]
+         }
+      ]
+   }
+}

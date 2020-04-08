@@ -1,0 +1,29 @@
+
+API: To get list of all registered users
+-----------------------------
+Request 
+--------
+URL : http://ipsolution.southindia.cloudapp.azure.com:8080/ekg-0.0.1-SNAPSHOT/api/auth/user/list
+
+Method Type : GET
+
+
+
+Request Header:
+	accept : application/json
+	contenty-type : application/json
+	
+
+Response:
+---------
+Success Response : Will return list of registered users.
+	{"userProfileList": [{
+	   "userName": "manmaya.champatiray@brillio.com",
+	   "firstname": "Manmaya",
+	   "middlename": "",
+	   "lastname": "Champatiray",
+	   "phoneNumber": "7338645544",
+	   "profileCreatedDate": 1539337951000,
+	   "profileModifiedDate": 1539337951000
+	}]}
+

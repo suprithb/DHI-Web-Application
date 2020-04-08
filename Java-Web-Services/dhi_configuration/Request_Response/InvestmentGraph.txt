@@ -1,0 +1,410 @@
+
+API: For getting investment graph json based on the investorId/investorName/investeeId/investeeName
+---------------------------------------------------------------------------------------------------
+Request 
+--------
+URL : http://ipsolution.southindia.cloudapp.azure.com:8080/ekg-0.0.1-SNAPSHOT/api/investment/collapsable/graph
+
+Method Type : POST
+
+Request Body:
+{
+                "investorAndInvesteeArray":[{
+                  "investorId":"1",
+                  "investeeId":"1"
+                },{
+                  "investorId":"1",
+                  "investeeId":"2"
+                }]
+}
+
+
+Request Header:
+	accept : application/json
+	contenty-type : application/json
+	
+
+
+Response:
+---------
+Success Response : On successfully getting the response based on the request
+		{
+   "name": "Investor",
+   "value": "Uber",
+   "lineThickness": "1",
+   "lineColor": "#7E9CEF",
+   "circleType": "investor",
+   "circleRadius": "5",
+   "circleColor": "#39b54a",
+   "sentimentScoreImage": "none",
+   "children":    [
+            {
+         "name": "Uber-to-Jump",
+         "value": "Uber-to-Jump",
+         "lineThickness": "1",
+         "lineColor": "#7E9CEF",
+         "circleType": "investment-event",
+         "circleRadius": "5",
+         "circleColor": "#7E9CEF",
+         "sentimentScoreImage": "none",
+         "children":          [
+                        {
+               "name": "Investment-Date",
+               "value": "null",
+               "lineThickness": "lineThickness",
+               "lineColor": "lineColor",
+               "circleType": "circleType",
+               "circleRadius": "CircleRadius",
+               "circleColor": "asdf",
+               "sentimentScoreImage": "sentimentScoreImage"
+            },
+                        {
+               "name": "Investement-Ratio",
+               "value": "100%",
+               "lineThickness": "100%",
+               "lineColor": "lineColor",
+               "circleType": "circleType",
+               "circleRadius": "CircleRadius",
+               "circleColor": "asdf",
+               "sentimentScoreImage": "sentimentScoreImage"
+            },
+                        {
+               "name": "Investee",
+               "value": "Jump",
+               "children":                [
+                                    {
+                     "name": "Company-Information",
+                     "children":                      [
+                                                {
+                           "name": "revenue",
+                           "value": "5M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF",
+                           "sentimentScoreImage": ""
+                        },
+                                                {
+                           "name": "value proposition",
+                           "value": "5M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF",
+                           "sentimentScoreImage": ""
+                        },
+                                                {
+                           "name": "employee count",
+                           "value": "5M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF",
+                           "sentimentScoreImage": ""
+                        }
+                     ]
+                  },
+                                    {
+                     "name": "Rating",
+                     "children":                      [
+                                                {
+                           "name": "credit score",
+                           "value": "5M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF"
+                        },
+                                                {
+                           "name": "risk score",
+                           "value": "5M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF"
+                        },
+                                                {
+                           "name": "sentiment score",
+                           "value": "5M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF"
+                        }
+                     ]
+                  },
+                                    {
+                     "name": "General",
+                     "children":                      [
+                                                {
+                           "name": "sentiment score",
+                           "value": "5M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF"
+                        },
+                                                {
+                           "name": "sentiment score",
+                           "value": "5M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+            {
+         "name": "Uber-to-Otto",
+         "value": "Uber-to-Otto",
+         "lineThickness": "1",
+         "lineColor": "#7E9CEF",
+         "circleType": "investment-event",
+         "circleRadius": "5",
+         "circleColor": "#7E9CEF",
+         "sentimentScoreImage": "none",
+         "children":          [
+                        {
+               "name": "Investment-Date",
+               "value": "null",
+               "lineThickness": "lineThickness",
+               "lineColor": "lineColor",
+               "circleType": "circleType",
+               "circleRadius": "CircleRadius",
+               "circleColor": "asdf",
+               "sentimentScoreImage": "sentimentScoreImage"
+            },
+                        {
+               "name": "Investement-Ratio",
+               "value": "100%",
+               "lineThickness": "100%",
+               "lineColor": "lineColor",
+               "circleType": "circleType",
+               "circleRadius": "CircleRadius",
+               "circleColor": "asdf",
+               "sentimentScoreImage": "sentimentScoreImage"
+            },
+                        {
+               "name": "Investee",
+               "value": "Otto",
+               "children":                [
+                                    {
+                     "name": "Company-Information",
+                     "children":                      [
+                                                {
+                           "name": "revenue",
+                           "value": "1M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF",
+                           "sentimentScoreImage": ""
+                        },
+                                                {
+                           "name": "value proposition",
+                           "value": "1M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF",
+                           "sentimentScoreImage": ""
+                        },
+                                                {
+                           "name": "employee count",
+                           "value": "1M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF",
+                           "sentimentScoreImage": ""
+                        }
+                     ]
+                  },
+                                    {
+                     "name": "Rating",
+                     "children":                      [
+                                                {
+                           "name": "credit score",
+                           "value": "1M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF"
+                        },
+                                                {
+                           "name": "risk score",
+                           "value": "1M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF"
+                        },
+                                                {
+                           "name": "sentiment score",
+                           "value": "1M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF"
+                        }
+                     ]
+                  },
+                                    {
+                     "name": "General",
+                     "children":                      [
+                                                {
+                           "name": "sentiment score",
+                           "value": "1M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF"
+                        },
+                                                {
+                           "name": "sentiment score",
+                           "value": "1M",
+                           "lineThickness": "1",
+                           "lineColor": "#7E9CEF",
+                           "circleType": "investee-attribute",
+                           "circleRadius": "0",
+                           "circleColor": "#7E9CEF"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+            {
+         "name": "Company-Information",
+         "children":          [
+                        {
+               "name": "revenue",
+               "value": "7.5B",
+               "lineThickness": "1",
+               "lineColor": "#7E9CEF",
+               "circleType": "investor-attribute",
+               "circleRadius": "0",
+               "circleColor": "#A2EEAC",
+               "sentimentScoreImage": ""
+            },
+                        {
+               "name": "value proposition",
+               "value": "7.5B",
+               "lineThickness": "1",
+               "lineColor": "#7E9CEF",
+               "circleType": "investor-attribute",
+               "circleRadius": "0",
+               "circleColor": "#A2EEAC",
+               "sentimentScoreImage": "sentimentScoreImage"
+            },
+                        {
+               "name": "employee count",
+               "value": "7.5B",
+               "lineThickness": "1",
+               "lineColor": "#7E9CEF",
+               "circleType": "investor-attribute",
+               "circleRadius": "0",
+               "circleColor": "#A2EEAC",
+               "sentimentScoreImage": "sentimentScoreImage"
+            }
+         ]
+      },
+            {
+         "name": "Rating",
+         "children":          [
+                        {
+               "name": "credit score",
+               "value": "7.5B",
+               "lineThickness": "1",
+               "lineColor": "#7E9CEF",
+               "circleType": "investor-attribute",
+               "circleRadius": "0",
+               "circleColor": "#A2EEAC",
+               "sentimentScoreImage": "none"
+            },
+                        {
+               "name": "sentiment score",
+               "value": "7.5B",
+               "lineThickness": "1",
+               "lineColor": "#7E9CEF",
+               "circleType": "investor-attribute",
+               "circleRadius": "0",
+               "circleColor": "#A2EEAC",
+               "sentimentScoreImage": "none"
+            },
+            {}
+         ]
+      },
+            {
+         "name": "General",
+         "children":          [
+                        {
+               "name": "credit score",
+               "value": "7.5B",
+               "lineThickness": "1",
+               "lineColor": "#7E9CEF",
+               "circleType": "investor-attribute",
+               "circleRadius": "0",
+               "circleColor": "#A2EEAC",
+               "sentimentScoreImage": "none"
+            },
+                        {
+               "name": "sentiment score",
+               "value": "7.5B",
+               "lineThickness": "1",
+               "lineColor": "#7E9CEF",
+               "circleType": "investor-attribute",
+               "circleRadius": "0",
+               "circleColor": "#A2EEAC",
+               "sentimentScoreImage": "none"
+            },
+            {}
+         ]
+      }
+   ]
+}
+	
+
+Error Response : When no record found based on the selection
+	{
+		"status": "error",
+		"status_code": "no_data_found",
+		"description": "No record found based on the selected filters"
+	}
+	
+
+Error Response : When missing mandatory parameters
+	{
+		"status": "error",
+		"status_code": "ekg_bad_request",
+		"description": "Atleast one parameter is need, either investorId/investeeId/investorName/investeeName"
+	}	
+	
+
+Error Response : When any internal error will occur
+	{
+		"status": "error",
+		"status_code": "ekg_server_error",
+		"description": "Server Internal error occurred."
+	}
+	

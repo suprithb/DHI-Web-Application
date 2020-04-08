@@ -1,0 +1,65 @@
+http://localhost:8080/DHI/api/discovery
+
+Request parameter : NA
+
+Sample Response :
+
+{"discovery": [
+      {
+      "column1": "col_name",
+      "column2": "col_type",
+      "column3": "col_description",
+      "column4": "alias"
+   },
+      {
+      "column1": "date",
+      "column2": "date",
+      "column3": "date of transaction",
+      "column4": "dt"
+   },
+      {
+      "column1": "subtheatre",
+      "column2": "category",
+      "column3": "sub region of transaction"
+   },
+      {
+      "column1": "region",
+      "column2": "category",
+      "column3": "region of transaction"
+   },
+      {
+      "column1": "productgroup",
+      "column2": "category",
+      "column3": "product grou of region",
+      "column4": "prodgrp"
+   },
+      {
+      "column1": "productlinecode",
+      "column2": "category",
+      "column3": "product linecode",
+      "column4": "prodlc"
+   },
+      {
+      "column1": "ordertype",
+      "column2": "category",
+      "column3": "type of order"
+   },
+      {
+      "column1": "bookingquantity",
+      "column2": "float",
+      "column3": "no. of quantity ",
+      "column4": "bookqaunt"
+   },
+      {
+      "column1": "bookingamt",
+      "column2": "float",
+      "column3": "amount of booking",
+      "column4": "bookamt"
+   },
+      {
+      "column1": "total_list",
+      "column2": "float",
+      "column3": "total list of value",
+      "column4": "tot_list"
+   }
+]}
