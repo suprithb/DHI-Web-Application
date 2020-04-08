@@ -1,0 +1,10 @@
+col_name,col_type,col_description,alias
+date,date,date of transaction,dt
+subtheatre,category,sub region of transaction,
+region,category,region of transaction,
+productgroup,category,product grou of region,prodgrp
+productlinecode,category,product linecode,prodlc
+ordertype,category,type of order,
+bookingquantity,float,no. of quantity ,bookqaunt
+bookingamt,float,amount of booking,bookamt
+total_list,float,total list of value,tot_list
