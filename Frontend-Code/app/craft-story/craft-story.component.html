@@ -1,0 +1,141 @@
+<header></header>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-wrapper">
+    <div class="sidebar-wrapper"
+     [ngClass]="commonService.displaySidebar?'sidebar-open':'sidebar-close'"
+     (mouseleave)="commonService.hideSidebar()"
+     (mouseenter)="commonService.showSidebar()">
+        <sidebar></sidebar>
+    </div>
+    <div class="right-content-wrapper" [ngClass]="commonService.displaySidebar?'width87':''" 
+    [ngStyle]="{'width':commonService.displaySidebarStyle}">
+    <div class="wrapper">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  stories-text-wrapper">
+        <div *ngIf="!this.commonService.isStoryOpen" class="col-lg-12 col-md-12 col-sm-12 title-div">
+        <p class="title">Craft Stories <span *ngIf="this.commonService.isStoryOpen">Last Refreshed : {{this.commonService.cardRefreshDate}}</span></p>
+        <button class="btn clear-story" *ngIf="this.commonService.cardsArray.length!=0" 
+        (click)="clearStories()">Clear</button>
+        <button class="btn save-story" *ngIf="this.commonService.cardsArray.length!=0" 
+        (click)="openDialog()">Save Story</button>
+    </div>
+    <div *ngIf="this.commonService.isStoryOpen" class="col-lg-12 col-md-12 col-sm-12 story-title-div">
+        <p class="title">{{this.commonService.openedStoryTitle}} <span>Last Refreshed : {{this.commonService.cardRefreshDate}}</span></p>
+        <button class="btn close-story" (click)="closeStory()">Close</button>
+        <button class="btn clear-story" (click)="createPPT(this.commonService.openedStoryTitle)">Save as PPT</button>
+        <button class="btn save-story" (click)="saveOpenedStory()">Save</button>
+        <button class="btn refresh" (click)="refresh()">Refresh</button>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 example-container" 
+            cdkDropListGroup
+            >
+            <div cdkDropList [cdkDropListEnterPredicate]="dropListEnterPredicate" 
+            (cdkDropListDropped)="dropListDropped()"></div>
+
+            <div cdkDropList exampleBox *ngFor="let item of this.commonService.cardsArray;let i=index"
+            class="col-lg-4 col-md-4 col-sm-4 example-box"
+            [cdkDropListEnterPredicate]="dropListEnterPredicate" 
+            (cdkDropListDropped)="dropListDropped()"
+            (mouseover)="changeStyle($event,i)" 
+            (mouseout)="changeStyle($event,i)"
+            id='example-container'
+            (dblclick)="openDialogImage(item,i)"
+            > 
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hover-div" 
+                    [ngClass]="(displayOptionsIcon && (indexNo==i))?'displayb':'displayn'">
+                        <div class="threedots-img" (click)="this.displayOptionsDiv=!this.displayOptionsDiv">
+                            <img alt="threedots-img" src="assets/images/3dots.png" />
+                        </div>
+                        <div class="close-img" (click)="delete(i)">
+                            <img alt="close-img" src="assets/images/close.png" />
+                        </div>
+                        <div class="flip-img" (click)="toggleFlip(item)">
+                            <img alt="flip-img" src="assets/images/Flip.png" />
+                        </div>
+                    </div>  
+                    <div [ngClass]="(displayOptionsDiv && displayOptionsIcon && (indexNo==i))?'displayb':'displayn'" (mouseover)="displayoptions($event,i)" 
+                    (mouseout)="displayoptions($event,i)"
+                    class="col-lg-12 col-md-12 col-sm-12 col-xs-12 options-menu">
+                            <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 clipboard-img" (click)="copyToClip(i)">
+                                <img src="assets/images/Copy_to_clipboard.png" />
+                            </div> -->
+                            <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 clipboard-img" (click)="copyToClip(i)">
+                                    <img src="assets/images/Copy_to_clipboard.png"/>
+                                  </div> -->
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 share-img">
+                                <a href="mailto:abc@abc.com?subject=my subject&body=see attachment&attachment=http://ipsolution.southindia.cloudapp.azure.com:8080/DHI/assets/test_user_bar_chart_hz_2019_07_17_15_54_28" target="_top">
+                                    <img src="assets/images/Share.png" />
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 download-img" (click)="export(item.tabularData)">
+                                    <img src="assets/images/Download_Data.png" />
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 download-img">
+                                    <a href="{{item.serverImageMessage}}" download>
+                                        <img src="assets/images/Download_Graph.png" />
+                                    </a>
+                                </div>
+                        </div>
+              <div cdkDrag class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-example-box" 
+              (cdkDragMoved)="dragMoved($event);">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tp-wrapper">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tp-box" 
+                    [@flipState]="item.flip">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tp-box__side tp-box__front">
+                            <input type="text" placeholder="Title" class="chart-title" 
+                            [(ngModel)]="item.title"/>
+                            <!-- <div id='image{{i}}' class="backend-image" *ngIf="!item.noImage">
+                                <img class="response-image" src="{{item.serverImageMessage}}" alt="response-image"/>
+                            </div> -->
+                            <div id='image{{i}}' class="backend-image svg-container" *ngIf="item.graphTypes.length!=0"></div>
+                            <div class="kpi-card svg-container col-lg-12 col-md-12 col-sm-12 col-xs-12" *ngIf="item.graphTypes.length==0">
+                                <p class="value">10,000,000</p>
+                                <p class="name">Us East</p>
+                            </div>
+                            <input type="text" placeholder="Build your narrative" class="chart-description" [(ngModel)]="item.storyItemComments"/>
+                        </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tp-box__side tp-box__back"> 
+                            <input type="text" placeholder="Title" class="chart-title" 
+                            [(ngModel)]="item.title"/>
+                        <div class="tableFixHead">                        
+                            <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                    <th *ngFor="let header of item.columNames">{{header}}</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                    <tr *ngFor="let data of item.sortedData">           
+                                            <td *ngFor="let column of item.columNames"
+                                            [ngClass]="isnumber(data[column])?'':'right-align'">
+                                                {{data[column]}}
+                                                <span *ngIf='!checkType(data[column])'>{{this.commonService.SIUnit[i]}}</span>
+                                            </td>
+                                    </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- <div class="tableFixHead">
+                                <table mat-table  [dataSource]="setTableData(item)" matSort class="mat-elevation-z8">
+                                   <ng-container matColumnDef="{{column}}" *ngFor="let column of item.columNames">
+                                      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{column}}</th>
+                                      <td mat-cell *matCellDef="let data"> {{data[column]}}<span *ngIf='!checkType(data[column])'>{{this.commonService.SIUnit[i]}}</span></td>
+                                   </ng-container>
+                                   <tr mat-header-row *matHeaderRowDef="item.columNames"></tr>
+                                   <tr mat-row *matRowDef="let row; columns: item.columNames;"></tr>
+                                </table>
+                             </div> -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <input type="text" placeholder="Build your narrative" class="chart-description" [(ngModel)]="item.storyItemComments"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            </div>
+          </div> 
+        </div> 
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 recent-stories-wrapper">
+    <recent-stories></recent-stories>
+        </div>
+    </div>
+</div>

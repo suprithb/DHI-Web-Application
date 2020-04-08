@@ -1,0 +1,8 @@
+<div mat-dialog-content>
+      <mat-form-field>
+          <input matInput [(ngModel)]="data.storyName" placeholder="Story Name">
+        </mat-form-field>
+  </div>
+  <div class="col-lg-12 col-sm-12 col-md-12 save-button">
+      <button mat-button [mat-dialog-close]="data.storyName" cdkFocusInitial (click)="saveStory()">Save Story</button>
+    </div>

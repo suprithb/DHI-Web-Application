@@ -1,0 +1,26 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header" #body>
+  <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2">
+  <img src="assets/images/dhi_header.png" alt="logo"/>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 search" [ngClass]="this.common.craftActive?'displayb':'displayn'">
+<input type="text" class="input" #input [(ngModel)]="this.query" 
+placeholder="What would you like to discover...." matInput 
+(keyup)="addBackground($event)"
+(focus)="focusIn()"
+autocomplete="off"
+(focusout)="focusOut()">
+<img *ngIf="recording" class="audio-loading" src="assets/images/loading.gif"/>
+<!-- <div class="onclick-sendtext" (click)="User_to_bot($event)"></div> -->
+<div [ngClass]="audio?'audio':'send-icon'" (click)="User_to_bot($event)"></div>
+<ul class="autocomplete-list" (click)="addBackground($event)" (focusout)="closeDropdown()">
+    <li (click)="executeQuery($event)" *ngFor="let option of filteredOptions | async"><a>{{option}}</a></li>
+</ul>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 server-response" 
+  *ngIf="this.common.serverResponse || this.common.successResponse || this.common.errorResponse"
+  [ngClass]="{'error':this.common.errorResponse, 'success': this.common.successResponse,'message': this.common.serverResponse}">
+    <p>
+{{this.common.serverTextMessage}}
+    </p>
+  </div>
+  </div>

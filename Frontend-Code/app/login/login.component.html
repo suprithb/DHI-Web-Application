@@ -1,0 +1,52 @@
+<div class="col-lg-12 col-sm-12 col-md-12 main-wrapper">
+    <div class="right-content-wrapper">
+        <div class="col-lg-12 col-sm-12 col-md-12 right-content">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <img src="assets/images/mobile_Splash_Logo.png" />
+                <p class="title">Welcome User</p>
+            </div>
+            <div class="col-lg-12 col-sm-12 col-md-12 form-wrapper">
+                <mat-form-field>
+                    <input matInput [(ngModel)]='username' type="text" placeholder="Username" autocomplete="off" (keyup.enter)="login()">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput [(ngModel)]='password' type="password" placeholder="Password" autocomplete="off" (keyup.enter)="login()">
+                </mat-form-field>
+                <div class="remember">
+                    <label class="container">Remember me
+                        <input type="checkbox" #checkbox [checked]=this.common.rememberMe/>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-lg-12 col-sm-12 col-md-12 form-buttons">
+                    <div class="col-lg-6 col-sm-6 col-md-6 login-wrapper" (click)="login()">
+                        <button type="button" mat-button class="login">Login</button>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-md-6 demo-wrapper">
+                        <button mat-button class="demo" routerLink="">Demo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-sm-12 col-md-12 wrapper">
+            <hr />
+            <div class="circle">or</div>
+        </div>
+        <div class="col-lg-12 col-sm-12 col-md-12">
+            <p class="signin-text">Sign in with</p>
+            <div class="col-lg-12 col-sm-12 col-md-12">
+                <button mat-button class="microsoft"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <bar-chart [data]=data></bar-chart> -->
+<!-- <form>
+    <label for="year">Please select a year: </label>
+    <label for="year">Please select a year: </label>
+    <input type="range" min=2009 max=2014 step=1 id="year" value=2014 oninput="selected_year.value = year.value">
+    <output name="selected_year" id="selected_year">2014</output>
+</form>
+<div id="vis">
+</div> -->
+

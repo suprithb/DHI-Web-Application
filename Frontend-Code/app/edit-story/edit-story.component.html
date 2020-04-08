@@ -1,0 +1,11 @@
+
+<div>
+<input type="text" class="input" #input [(ngModel)]="this.query" 
+placeholder="What would you like to discover...." matInput 
+[formControl]="myControl"  (keyup)="addBackground($event)"
+(focusout)="closeDropdown()"
+(focus)="ngOnInit()">
+<ul class="autocomplete-list">
+    <li *ngFor="let option of filteredOptions | async"><a>{{option}}</a></li>
+</ul>
+</div>

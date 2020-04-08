@@ -1,0 +1,52 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sidebar">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-details">
+<img src="assets/images/user.png" alt="user"/>
+<p>Hello <span>{{this.common.firstName}}</span></p>
+<div (click)="toggleShowDiv()">
+<img [src]="animationState=='in' ? 'assets/images/Close1.png' : 'assets/images/edit.png'" alt="edit"/>
+</div>
+<div [@slideInOut]="animationState" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 edit-div">
+    <ul>
+      <li>
+        <img alt="history" src="assets/images/Conversations.png"/>
+        <a>History</a>
+      </li>
+      <li>
+          <img alt="settings" src="assets/images/Settings.png"/>
+        <a>Settings</a>
+      </li>
+      <li>
+          <img alt="profile" src="assets/images/user1.png"/>
+        <a>Profile</a>
+      </li>
+      <li (click)="logout()">
+          <img alt="logout" src="assets/images/Logout.png"/>
+        <a>Logout</a>
+      </li>
+    </ul>
+    </div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list">
+<ul>
+  <li [ngClass]="{'active': common.connectActive == true }">
+    <img alt="connect" src="assets/images/Connect.png"/>
+    <a routerLink="/connect">Connect</a>
+  </li>
+  <li [ngClass]="{'active': common.discoverActive == true }">
+      <img alt="discover" src="assets/images/Configure.png"/>
+    <a routerLink="/discover">Configure</a>
+  </li>
+  <li [ngClass]="{'active': common.craftActive == true }">
+      <img alt="craft-stories" src="assets/images/Craft_Story.png"/>
+    <a routerLink="/craft-stories">Craft Stories</a>
+  </li>
+  <li [ngClass]="{'active': common.storiesActive == true }">
+      <img alt="stories" src="assets/images/Stories.png"/>
+    <a routerLink="/stories">Stories</a>
+  </li>
+</ul>
+</div>
+<div class="dots-wrapper" (mouseover)="toggleSidebar()">
+<img src="assets/images/Side_Dots.png" alt="side-dots"/>
+</div>
+</div>

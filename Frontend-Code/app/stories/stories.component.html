@@ -1,0 +1,45 @@
+<header></header>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-wrapper">
+    <div class="sidebar-wrapper"
+    [ngClass]="commonService.displaySidebar?'sidebar-open':'sidebar-close'"
+    (mouseleave)="commonService.hideSidebar()"
+    (mouseenter)="commonService.showSidebar()">
+        <sidebar></sidebar>
+    </div>
+    <div class="right-content-wrapper" [ngClass]="commonService.displaySidebar?'width87':''" 
+    [ngStyle]="{'width':commonService.displaySidebarStyle}">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 stories-text-wrapper">
+            <p class="title">Stories</p>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 refresh-wrapper" (click)="Refresh()">
+            <img src="assets/images/Refresh.png" alt="Refresh"/>
+        </div>
+          </div> 
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 story-card">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mat-card-wrapper" 
+            *ngFor="let stories of stories;let i=index" 
+            (dblclick)="openStory(stories)"
+            (mouseover)="changeStyle($event,i)" 
+            (mouseout)="changeStyle($event,i)">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hover-div" 
+            [ngClass]="(displayOptionsIcon && (indexNo==i))?'displayb':'displayn'">
+                <div class="close-img" (click)="deleteStory(stories)">
+                    <img alt="close-img" src="assets/images/close.png" />
+                </div>
+            </div> 
+                <mat-card>
+                    <mat-card-title>{{stories.storyTitle}}</mat-card-title>
+                    <mat-card-content class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id='story{{i}}'>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 story-image" id='story{{i}}{{index}}'
+                        *ngFor="let storyContent of stories.storyItem | slice:0:4;let index=index">
+                          <!-- <img width="100%" src={{storyContent.serverImageMessage}} alt="card-graph"/> -->
+                          <div></div>
+                      </div>
+                    </mat-card-content>
+                  </mat-card>
+            </div>
+          </div>
+          <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 button-wrapper">
+              <button class="btn craft-story">Save as PPT</button>
+          </div> -->
+    </div>
+</div>

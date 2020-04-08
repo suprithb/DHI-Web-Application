@@ -1,0 +1,16 @@
+<div class="main-wrapper" *ngIf="recentStories.length!=0">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 recent-stories-wrapper"
+[ngClass]="this.showRecentStories?'open-recent-stories':'close-recent-stories'"
+>
+<div class={{titleClass}}>
+  <p>
+      Recent Stories
+  </p>
+</div>
+<div class={{storyNameClass}}>
+  <div class={{storySubclass}} *ngFor="let recentStories of recentStories">
+      <p (click)="openStory(recentStories)">{{recentStories.storyTitle}}</p>
+  </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,75 @@
+.stories-text-wrapper{
+    padding: 10px 20px 0 20px;
+ }
+.stories-text-wrapper p{
+   display: inline;
+   font-size: 14px;
+ }
+.stories-text-wrapper img{
+     float: right;
+ }
+.mat-card{
+     float: left;
+     width: 100%;
+     padding: 0;
+     min-height: 265px;
+ }
+.mat-card-wrapper{
+     padding: 5px;
+ }
+.mat-card-title {
+    font-size: 12px;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: unset;
+ }
+ /*Story Button styles*/
+.craft-story{
+    width: 120px;
+    /* background-image: linear-gradient(to right, #1caad8 , #36c6a0); */
+    background-color: #cccccc;
+    color: #ffffff;
+ }
+.button-wrapper{
+    text-align: center;
+    padding: 20px;
+ }
+ /*Story Button styles*/
+.story-card{
+     min-height: 463px;
+     max-height: 463px;
+     overflow-y: auto;
+ }
+.refresh-wrapper{
+     float: right;
+     cursor: pointer;
+ }
+.hover-div{
+    position: absolute;
+    top: 0px;
+ }
+.close-img{
+    position: absolute;
+    top: 11px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999;
+ }
+.title span{
+    padding-left: 10px;
+    font-size: 12px;
+  }
+.story-image{
+      padding: 1px;
+  }
+.sidebar-wrapper{
+    float: left;
+    width: 16.66666667%;
+  }
+.right-content-wrapper{
+    padding: 0;
+    float: left;
+  }
+.width87{
+    width: 83.33333333%;
+  }

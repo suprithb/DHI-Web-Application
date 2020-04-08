@@ -1,0 +1,6 @@
+<span id="body">
+<router-outlet></router-outlet>
+<div [ngClass]="[(this.common.loading?'displayb':'displayn'),(this.common.displaySidebar?'loader-gif-sidebar-open':'loader-gif')]">
+    <img src="assets/images/Loader.gif" alt="loader"/>
+</div>
+</span>

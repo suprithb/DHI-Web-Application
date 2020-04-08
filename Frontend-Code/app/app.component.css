@@ -1,0 +1,12 @@
+.loader-gif{
+    position: absolute;
+    left: 43%;
+    top: 30%;
+    z-index: 9999;
+  }
+  .loader-gif-sidebar-open{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    z-index: 9999;
+  }

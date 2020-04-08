@@ -1,0 +1,72 @@
+<header></header>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+<div class="sidebar-wrapper"
+[ngClass]="commonService.displaySidebar?'sidebar-open':'sidebar-close'"
+(mouseleave)="commonService.hideSidebar()"
+(mouseenter)="commonService.showSidebar()">
+    <sidebar></sidebar>
+</div>
+<div  class="right-content-wrapper" [ngClass]="commonService.displaySidebar?'width87':''" 
+[ngStyle]="{'width':commonService.displaySidebarStyle}"
+>
+<p class="title">Load Data</p>
+<div class="search col-lg-2 col-md-2 col-sm-2 col-xs-2">
+    <input type="text" placeholder="Search"/>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tab-wrapper">
+    <mat-tab-group [selectedIndex]="1">
+        <mat-tab label="All">
+        </mat-tab>
+        <mat-tab label="File">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 icon-div">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 wrapper cursor_pointer" [ngClass]="{'selected':(selected==true && indexNo==1)}" (click)="upload(1)">
+                  <img src="assets/images/Excel.png" />
+                  <p>Excel</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 wrapper cursor_pointer" [ngClass]="{'selected':(selected==true && indexNo==2)}" (click)="upload(2)">
+                  <img src="assets/images/TXT.PNG" />
+                  <p>Txt/CSV</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 wrapper" [ngClass]="{'selected':(selected==true && indexNo==3)}">
+                  <img src="assets/images/XML_disabled.PNG" />
+                  <p class="grey-text">XML</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 wrapper" [ngClass]="{'selected':(selected==true && indexNo==4)}">
+                  <img src="assets/images/JSON_disabled.PNG" />
+                  <p class="grey-text">JSON</p>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 icon-div">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 wrapper" [ngClass]="{'selected':(selected==true && indexNo==5)}">
+                  <img src="assets/images/Folder_disabled.png" />
+                  <p class="grey-text">Folder</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 wrapper" [ngClass]="{'selected':(selected==true && indexNo==6)}">
+                  <img src="assets/images/PDF_disabled.PNG" />
+                  <p class="grey-text">PDF</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 wrapper" [ngClass]="{'selected':(selected==true && indexNo==7)}">
+                  <img src="assets/images/Sharepoint_disabled.png" />
+                  <p class="grey-text">SharePoint</p>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 button-wrapper">
+                  <!-- <button type="button" class="load" (click)="uploadFileToServe()">
+                      <label>Load</label>
+                    </button> -->
+                    <input id="fileToUpload" type="file" (change)="uploadFileToServe($event)" style="display:none;">
+                  <!-- <button class="cancel">Cancel</button> -->
+                </div> 
+        </mat-tab>
+        <mat-tab label="Database-Cloud">
+        </mat-tab>
+        <mat-tab label="Azure">
+        </mat-tab>
+        <mat-tab label="Online Services">
+          </mat-tab>
+          <mat-tab label="Other">
+            </mat-tab>
+      </mat-tab-group>
+</div>
+</div>
+</div>

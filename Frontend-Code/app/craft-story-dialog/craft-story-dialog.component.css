@@ -1,0 +1,8 @@
+.save-button{
+    text-align: center;
+    padding: 10px;
+}
+.save-button button{
+    background-image: linear-gradient(to right, #1caad8 , #36c6a0);
+    color: #ffffff;
+}

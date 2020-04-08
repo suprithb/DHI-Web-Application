@@ -1,0 +1,73 @@
+.sidebar{
+    height: calc( 100vh - 51px );
+    background-color: #3d3d3d;
+    text-align: center;
+    color: #ffffff;
+    padding: 0;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1), 0 0px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.list li{
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 9px 0;
+    text-align: center;
+    border-top-left-radius: 57px;
+    border-bottom-left-radius: 57px;
+}
+ul{
+    padding-left: 0;
+}
+.edit-div li{
+    list-style-type: none;
+    text-align: center;
+    border-top-left-radius: 57px;
+    border-bottom-left-radius: 57px;
+    cursor: pointer;
+}
+padding0{
+    padding: 0;
+}
+.edit-div{
+    transition: block 1s ease-out;
+    padding: 17px 0px 0px;
+}
+.dots-wrapper{
+    position: absolute;
+    right: -11px;
+    top: 60px;
+    z-index: 99;
+    cursor: pointer;
+}
+.dots-wrapper-sidebar-close{
+    left: 0;
+    position: absolute;
+    top: 60px;
+    z-index: 99;
+    cursor: pointer;
+}
+.show{
+    transition: 1s;
+    left: 0;
+}
+.active{
+    background-image: linear-gradient(to right, #1caad8 , #36c6a0);
+    transition: all 1s ease-in-out;
+}
+.list{
+    padding: 0;
+}
+.user-details{
+    padding: 10px 0;
+}
+li a{
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.edit-div ul li a{
+    padding-left: 15px;
+}
+.user-details p{
+    padding-top: 10px;
+}

@@ -1,0 +1,121 @@
+.main-wrapper{
+  position: relative;
+}
+ /*Fixed header table*/
+ .tableFixHead {
+    min-height: 234px;
+    max-height: 234px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+.tableFixHead table {
+    /* border-collapse: collapse; */
+    width: 100%;
+  }
+.tableFixHead th,
+.tableFixHead td {
+    padding: 8px 16px;
+}
+.tableFixHead th {
+    position: sticky;
+    color: #ffffff;
+    top: 0;
+    text-align: center;
+    background-image: linear-gradient(to right, #1caad8 , #36c6a0);
+  }
+  /*Fixed header table*/
+.table-wrapper{
+    padding-top: 8px;
+  }
+
+.mat-dialog-content{
+  padding: 0;
+  float: left;
+  width: 100%;
+  margin: 0;
+}
+.mat-dialog-title{
+  text-align: center;
+}
+.mat-dialog-actions {
+  padding:0;
+  display: block;
+  flex-wrap: unset;
+  min-height: unset;
+  align-items: center;
+  text-align: right;
+  margin-bottom: unset;
+}
+.cancel{
+  background: #ffffff;
+  border: none;
+  font-size: 22px;
+  outline: none;
+  float: right;
+  color: #7a7a7a;
+  display: none;
+}
+.share-img,.download-img{
+  padding: 0;
+}
+.padding0{
+  padding: 0;
+}
+.button-wrapper{
+  position: absolute;
+  top: -14px;
+  right: -16px;
+  z-index: 999;
+}
+.right-align{
+  text-align: right !important;
+}
+:host::ng-deep .mat-form-field-infix{
+  border-top: unset!important;
+}
+:host::ng-deep td.mat-cell{
+  font-size: 12px;
+  border: 1px solid #eeeeee;
+  border-bottom-width: unset;
+  border-bottom-style: unset;
+}
+:host::ng-deep tr.mat-row,
+:host::ng-deep tr.mat-header-row{
+  height: 30px;
+}
+/*sketch picker styles*/
+.sketch-picker{
+  position: absolute;
+  top: 28px;
+  right: 4px;
+  /* left: 6px; */
+  z-index: 99;
+}
+/* :host::ng-deep .mat-form-field-underline,:host::ng-deep .mat-select{
+  width: 60%;
+} */
+:host::ng-deep input.mat-input-element{
+  width: 14%;
+  border-radius: 50%;
+}
+/* ::ng-deep .mat-dialog-container{
+  padding-top: 0 !important;
+} */
+::ng-deep .mat-form-field{
+  text-align: initial !important;
+}
+.edit-option-wrapper{
+  position: absolute;
+  top: 6px;
+  left: 19%;
+}
+.option-menu{
+  padding: 10px 0;
+}
+.label{
+  font-weight: unset!important;
+}
+::ng-deep .mat-dialog-container:hover .cancel{
+  display: block;
+} 
