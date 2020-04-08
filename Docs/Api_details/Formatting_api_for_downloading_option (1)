@@ -1,0 +1,441 @@
+API : To format the data for download option
+URL : http://ipsolution.southindia.cloudapp.azure.com:8080/DHI/api/data-formatting/query-data
+Method Type : GET
+
+Request Header:
+	accept : application/json
+	contenty-type : application/json
+	
+Sample Request :
+{
+   "status": "success",
+   "statusCode": "200",
+   "searchShowImage": "true",
+   "searchShowJsonData": "false",
+   "serverTextMessage": "",
+   "serverImageMessage": "http://ipsolution.southindia.cloudapp.azure.com:8080/DHI/assets/test_user_bar_chart_hz_2019_07_11_11_16_39",
+   "tabularData":    {
+      "columNames":       [
+         "sum(bookingamt)",
+         "region"
+      ],
+      "row":       [
+                  {
+            "rowNumber": "1",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "3364.8699999999994"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "Brazil"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "2",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "-3103.560000000001"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "CEEMA"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "3",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "5528.360000000001"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "Canada"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "4",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "3778.2200000000003"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "China"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "5",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "12545.090000000002"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "Cross Geo (Philip)"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "6",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "3269.1800000000003"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "DACH&Russia"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "7",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "3557.24"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "France"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "8",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "8021.320000000001"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "HSE"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "9",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "8738.320000000003"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "Hong Kong/Macau"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "10",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "3388.34"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "India"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "11",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "-87.59000000000103"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "Japan"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "12",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "4351.42"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "Korea"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "13",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "2489.0"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "MCA"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "14",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "1250.3399999999997"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "Mexico"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "15",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "3677.4699999999993"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "NOE"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "16",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "8759.600000000002"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "SEA & Taiwan"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "17",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "628.7599999999992"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "SOE"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "18",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "2562.9100000000008"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "South Pacific"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "19",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "-5142.219999999999"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "U.S. Central"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "20",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "5637.48"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "U.S. East"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "21",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "4092.0499999999997"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "U.S. Federal"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "22",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "5557.930000000001"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "U.S. West"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "23",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "3585.27"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "UK&I"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "24",
+            "columnValues":             [
+                              {
+                  "columnName": "sum(bookingamt)",
+                  "columnValue": "3812.21"
+               },
+                              {
+                  "columnName": "region",
+                  "columnValue": "US-HSE"
+               }
+            ]
+         }
+      ]
+   }
+}
+
+
+
+
+Sample Response :
+
+[
+      {
+      "sum(bookingamt)": "3364.8699999999994",
+      "region": "Brazil"
+   },
+      {
+      "sum(bookingamt)": "-3103.560000000001",
+      "region": "CEEMA"
+   },
+      {
+      "sum(bookingamt)": "5528.360000000001",
+      "region": "Canada"
+   },
+      {
+      "sum(bookingamt)": "3778.2200000000003",
+      "region": "China"
+   },
+      {
+      "sum(bookingamt)": "12545.090000000002",
+      "region": "Cross Geo (Philip)"
+   },
+      {
+      "sum(bookingamt)": "3269.1800000000003",
+      "region": "DACH&Russia"
+   },
+      {
+      "sum(bookingamt)": "3557.24",
+      "region": "France"
+   },
+      {
+      "sum(bookingamt)": "8021.320000000001",
+      "region": "HSE"
+   },
+      {
+      "sum(bookingamt)": "8738.320000000003",
+      "region": "Hong Kong/Macau"
+   },
+      {
+      "sum(bookingamt)": "3388.34",
+      "region": "India"
+   },
+      {
+      "sum(bookingamt)": "-87.59000000000103",
+      "region": "Japan"
+   },
+      {
+      "sum(bookingamt)": "4351.42",
+      "region": "Korea"
+   },
+      {
+      "sum(bookingamt)": "2489.0",
+      "region": "MCA"
+   },
+      {
+      "sum(bookingamt)": "1250.3399999999997",
+      "region": "Mexico"
+   },
+      {
+      "sum(bookingamt)": "3677.4699999999993",
+      "region": "NOE"
+   },
+      {
+      "sum(bookingamt)": "8759.600000000002",
+      "region": "SEA & Taiwan"
+   },
+      {
+      "sum(bookingamt)": "628.7599999999992",
+      "region": "SOE"
+   },
+      {
+      "sum(bookingamt)": "2562.9100000000008",
+      "region": "South Pacific"
+   },
+      {
+      "sum(bookingamt)": "-5142.219999999999",
+      "region": "U.S. Central"
+   },
+      {
+      "sum(bookingamt)": "5637.48",
+      "region": "U.S. East"
+   },
+      {
+      "sum(bookingamt)": "4092.0499999999997",
+      "region": "U.S. Federal"
+   },
+      {
+      "sum(bookingamt)": "5557.930000000001",
+      "region": "U.S. West"
+   },
+      {
+      "sum(bookingamt)": "3585.27",
+      "region": "UK&I"
+   },
+      {
+      "sum(bookingamt)": "3812.21",
+      "region": "US-HSE"
+   }
+]

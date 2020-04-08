@@ -1,0 +1,22 @@
+API : To download ppt by storyName and userName
+URL : http://ipsolution.southindia.cloudapp.azure.com:8080/DHI/api/stories/ppt/{story-name}
+Method Type : GET
+
+Path Param :
+story-name : <testStoryForRefresh>
+
+Request Header:
+	accept : application/json
+	contenty-type : application/json
+	user-name : userNameValue
+	
+Sample Response :
+{
+	"status":"success",
+	"description":"uccessfully created the ppt with the name as : " +  test_story_Presentation.pptx",
+	"pptDownloadUri":"http://ipsolution.southindia.cloudapp.azure.com:8080/DHI/assets/ppt/test_story.pptx"
+
+}
+
+
+	

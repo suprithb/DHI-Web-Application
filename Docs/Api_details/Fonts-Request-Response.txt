@@ -1,0 +1,85 @@
+
+API: For getting all the available fonts 
+----------------------------------------------------
+Request 
+--------
+URL : http://ipsolution.southindia.cloudapp.azure.com:8080/DHI/assets/fonts
+
+Method Type : GET
+
+Request Body:
+
+	NA
+
+Request Header:
+	accept : application/json
+	contenty-type : application/json
+	
+
+Response:
+---------
+Success Response : When successfully gets the response
+	
+[
+      {
+      "category": "Times New Roman",
+      "family": "Times New Roman"
+   },
+      {
+      "category": "Verdana",
+      "family": "Verdana"
+   },
+      {
+      "category": "Roboto",
+      "family": "Roboto"
+   }
+]
+
+
+API: To add font details 
+----------------------------------------------------
+Request
+
+Method Type : POST
+
+Request Body: 
+
+[
+      {
+      "family": "Times New Roman",
+      "category": "Times New Roman"
+   },
+      {
+      "family": "Verdana",
+      "category": "Verdana"
+   },
+      {
+      "family": "Roboto",
+      "category": "Roboto"
+   }
+ ]
+ 
+ Sample Response :
+ {
+   "status": "success",
+   "description": "Successfully saved the fonts "
+}
+
+API: To delete font details by category and family 
+----------------------------------------------------
+Request
+
+Method Type : DELETE
+
+Request Body:
+{
+	"category":"Times New Roman",
+	"family":"Times New Roman"
+}
+
+Sample Response:
+{
+   "status": "success",
+   "description": "Successfully deleted the fonts "
+}
+

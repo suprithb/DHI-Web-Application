@@ -1,0 +1,357 @@
+Api : Request for query tab having columns with data-types and graph-types
+
+Request :
+	URL : http://ipsolution.southindia.cloudapp.azure.com:8080/DHI/v2/query/{room-id}
+	Request Body :
+		{
+			"clientTextMessage": "Booking_Quantity by region"
+		}
+	content-type : application/json
+	accept : application/json
+	
+	PathVariable : 
+		room-id : <Chat-room-id>
+
+Sample Response :
+{
+   "status": "success",
+   "statusCode": "200",
+   "title": "Booking_quantity by region",
+   "searchShowImage": "true",
+   "searchShowJsonData": "true",
+   "serverTextMessage": "",
+   "serverImageMessage": "http://ipsolution.southindia.cloudapp.azure.com:8080/DHI/assets/test_user_bar_chart_hz_2019_10_16_13_40_43",
+   "userQueryMessage": "Booking_Quantity by region",
+   "storyItemId": "1571213440371",
+   "tabularData":    {
+      "columNames":       [
+         "Region",
+         "Booking_quantity"
+      ],
+      "columnWithTypes":       [
+                  {
+            "columnName": "Region",
+            "dataType": "object"
+         },
+                  {
+            "columnName": "Booking_quantity",
+            "dataType": "int64"
+         }
+      ],
+      "graphTypes": ["bar_chart_vr"],
+      "row":       [
+                  {
+            "rowNumber": "1",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "brazil"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "95,079"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "2",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "canada"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "273,977"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "3",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "ceema"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "673,259"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "4",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "china"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "298,354"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "5",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "cross geo (philip)"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "54,046"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "6",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "dach&russia"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "721,433"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "7",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "france"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "310,254"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "8",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "hong kong/macau"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "75,502"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "9",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "hse"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "10,084"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "10",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "india"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "211,517"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "11",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "japan"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "335,210"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "12",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "korea"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "97,828"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "13",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "mca"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "159,985"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "14",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "mexico"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "69,280"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "15",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "noe"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "482,404"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "16",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "sea & taiwan"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "521,137"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "17",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "soe"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "546,954"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "18",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "south pacific"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "220,817"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "19",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "u.s. central"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "636,256"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "20",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "u.s. east"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "920,058"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "21",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "u.s. federal"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "120,944"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "22",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "u.s. west"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "433,268"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "23",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "uk&i"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "278,227"
+               }
+            ]
+         },
+                  {
+            "rowNumber": "24",
+            "columnValues":             [
+                              {
+                  "columnName": "Region",
+                  "columnValue": "us-hse"
+               },
+                              {
+                  "columnName": "Booking_quantity",
+                  "columnValue": "605"
+               }
+            ]
+         }
+      ]
+   }
+}	

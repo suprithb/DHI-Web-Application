@@ -1,0 +1,27 @@
+API : To delete from favourite
+URL : http://ipsolution.southindia.cloudapp.azure.com:8080/DHI/api/favourite
+
+accept : application/json
+content-type : application/json
+
+Sample Request body :
+{
+	"fullUrl":"c://test//asdfasdfasdf-4"
+}
+
+
+Sample Response :
+
+
+Case -1 : Success Case 
+{
+   "status": "success",
+   "description": "Successfully removed the user-favourite"
+}
+
+Case - 2 : If file path is not present
+{
+   "status": "error",
+   "statusCode": "dhi_data_not_found_error",
+   "description": "Error : Seems like record not present in the database."
+}

@@ -1,0 +1,22 @@
+API : To get all stories by user-name
+URL : http://ipsolution.southindia.cloudapp.azure.com:8080/DHI/api/stories/{story-name}
+
+Method Type : DELETE
+Path-Param :
+	story-name : <story-name value>
+
+Request Header:
+	accept : application/json
+	contenty-type : multipart/form-data
+	user-name : <user-name-value>
+
+Note : Mandatory parameters are : user-name
+
+
+
+
+Sample Response :
+{
+   "status": "Success",
+   "description": "Successfully deleted the story with story-name : testName50.json"
+}
