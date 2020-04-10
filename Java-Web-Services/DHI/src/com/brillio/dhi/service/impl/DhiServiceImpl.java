@@ -606,8 +606,8 @@ public class DhiServiceImpl implements DhiService{
 	@Override
 	public FileUploadResponse saveMultipartFile(MultipartFile file, String userName) throws MissingMandatoryParameterException, ServerException{
 		
+		//Step-1 : Checking for the mandatory parameters, i.e file and userName
 		LOGGER.debug("In saveMultipartFile of DhiServiceImpl method");
-		
 		if(file == null) {
 			throw new MissingMandatoryParameterException("Seems like file is not attached!!! Please check","error","dhi_file_upload_error");
 		}
@@ -616,11 +616,16 @@ public class DhiServiceImpl implements DhiService{
 			throw new MissingMandatoryParameterException("Missing mandatory parameter : user-name","error","dhi_missing_required_parameter");
 		}
 		
+		//This is the response which need to be responded back to the user.
 		FileUploadResponse fileUploadResponse = new FileUploadResponse();
 		
+		
+		//Step-2 : Getting filesystem path where need to add the data-model file and the alias/discover file.
 		String description = "";
+		//Step-2.1 : Getting path from the property file.
 		String uploadingDir = PropertiesConfigurationReader.getServerProperty("path_to_uploaded_csv");
 		userName = userName.trim();
+		//Step-2.2 : Create the directory in the configured path with the user-name if not already present.
 		String directory = uploadingDir + "/" + userName + "/";
 		try {
 			new File(directory).mkdirs();
@@ -628,8 +633,8 @@ public class DhiServiceImpl implements DhiService{
 			throw new ServerException("Server Internal Error : Unable to create directory with the path - " + directory,"error","dhi_internal_server_error");
 		}
 		
-		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 		
+		//Spliting the file-name from the extension, just to get only the original file name.
 		String fileName = file.getOriginalFilename();
 		String[] fileFirstName = fileName.split("\\.");
 		System.out.println(fileFirstName[0]);
@@ -638,24 +643,30 @@ public class DhiServiceImpl implements DhiService{
 		List<String> uploadingFileErrorList = new ArrayList<String>();
 		List<String> uploadingFileSuccessList = new ArrayList<String>();
 		 
-		 //Creating alias file path
+		 //Creating alias file in the path
 		 String aliasFileName = fileFirstName[0]+"_alias.csv";
 		 File aliasFile = new File(directory + aliasFileName);
 		 aliasFile.delete();
 		 
-		 //Creating data-model file
+		 //Creating data-model file in the configured file path
 		 File dataModelFile = new File(directory + file.getOriginalFilename());
 		 dataModelFile.delete();
         try {
         	file.transferTo(dataModelFile);
+        	//this is to have a track which file is getting uploaded successfully.
         	uploadingFileSuccessList.add(file.getOriginalFilename());
 		} catch (IllegalStateException | IOException e) {
 			e.printStackTrace();
+			//this is to have a track which file is getting not uploaded successfully.
 			uploadingFileErrorList.add(file.getName());
 			throw new ServerException("Server Internal Error : Unable to upload file(s) to the server - "  + e.getMessage(),"error","dhi_internal_server_error");	
 		}
         
+        //This implmented was done to support uploading of multiple data-files in to the backend system i.e java system.
+        //Below information is required to make an entry in the database, which data-file is the default and active data-model, i.e from a list of multiple data-files
+        //which will be used for querying user-request.
         //Save the data-file information
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         FileUploadDataSource fileUploadDataSource = new FileUploadDataSource();
         UserProfileEntity userProfileEntity = new UserProfileEntity();
         userProfileEntity.setUsername(userName);
@@ -666,6 +677,7 @@ public class DhiServiceImpl implements DhiService{
         fileUploadDataSource.setDefaultFlag("true");
         fileUploadDataSource.setIsActive("true");
         
+        //Here, we are updating the entry in the database with the default and active datamodel, if fileUploadDataSource is exist or else create a new fileUploadDataSource then update the default flag.
         try {
         	FileUploadDataSource fileUploadDataSourceEntity = fileUploadDataSourceDao.getFileDataSource(fileUploadDataSource.getUserProfile().getUsername(), fileUploadDataSource.getDataModelFileName());
         	fileUploadDataSourceEntity.setCreatedDate(timestamp);
@@ -678,8 +690,6 @@ public class DhiServiceImpl implements DhiService{
 		}
     
  
-        
-        
         //Get the token from the database
         String token = null;
 		try {
@@ -696,13 +706,17 @@ public class DhiServiceImpl implements DhiService{
 		}catch(NoRecordFoundException e) {
 			//Not required to re-throw
 		}
-				
+		
+		
+		//While uploading the file, if we encountered with any error or issues, then this error message will be thrown back.
 		if(uploadingFileErrorList != null && uploadingFileErrorList.size() > 0) {
 			fileUploadResponse.setStatus("error");
 			description = "Occurred error while uploading file with names : " + uploadingFileErrorList;
 			fileUploadResponse.setStatusCode("dhi_file_upload_error");
 			
 		}else {
+			
+			//Once the datafiles successfully uploaded, then we need to invoke(Flask REST Call) the AI model to generate the alias file information. 
 			String pythonAIMetaDataUrl = PropertiesConfigurationReader.getServerProperty("python_ai_meta_data_url");
 			String dataFilePath = directory + file.getOriginalFilename();
 			MetaDataFileRequest metaDataFileRequest = new MetaDataFileRequest();
@@ -710,14 +724,13 @@ public class DhiServiceImpl implements DhiService{
 			Gson gson = new Gson();
 			String requestBody = gson.toJson(metaDataFileRequest);
 			
-			// Call to separate thread for indexing the content for search api
+			//Created a new thread and invoking to the AI model api.
 			try{
-				//LOGGER.debug("In createOrUpdatePlaylist() of class PlaylistSyncServiceImpl, calling the search indexing with a separate thread for PlaylistId : " + playlistItem.getId());
 				FileMetadataThread fileMetadataThread = new FileMetadataThread(pythonAIMetaDataUrl,requestBody,directory + aliasFileName);
 				fileMetadataThread.start();
 				fileMetadataThread.join();
 			}catch(Exception e){
-				//LOGGER.error("In createOrUpdatePlaylist() of class PlaylistSyncServiceImpl, error occurred while calling the playlist indexing, please check immediately and resolve the probrem ASAP, for PlaylistId : " + playlistItem.getId());
+				LOGGER.error("Error occurred while performing operation with AI model : " + e.getMessage());
 			}
 			
 			fileUploadResponse.setStatus("success");
@@ -731,13 +744,15 @@ public class DhiServiceImpl implements DhiService{
 			}
 		}
 		
-		
+		//Once AI will generate the alias information successfully, the we will update the auto-suggesstion file with the newly uploaded column names.
 		try {
 			updateAutoSuggestionForColumns(userName);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 		
+		
+		//finally, return the response.
 		return fileUploadResponse;
 	}
 	
